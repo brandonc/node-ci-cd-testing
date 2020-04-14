@@ -1,0 +1,23 @@
+{
+  "name": "ci-cd-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TattdCodeMonkey/node-ci-cd-testing.git"
+  },
+  "author": "Rodney Norris",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TattdCodeMonkey/node-ci-cd-testing/issues"
+  },
+  "homepage": "https://github.com/TattdCodeMonkey/node-ci-cd-testing#readme",
+  "dependencies": {
+    "mocha": "^7.1.1"
+  }
+}
