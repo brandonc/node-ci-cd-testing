@@ -13,7 +13,7 @@ task "test": {
     {
       name: "test"
       image: "node:lts-slim"
-      command: [ "/bin/bash", "-c", "npm i && npm run test" ] 
+      command: [ "/bin/bash", "-c", "npm ci && npm run test" ] 
       workingDir: "/workspace/src-git"
     }
   ]
