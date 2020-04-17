@@ -6,14 +6,29 @@ resource "src-git": {
   param revision: "$(context.git.commit)"
 }
 
+resource "artifacts": {
+  type: "storage"
+  param type: "gcs"
+  param location: "s3://artifacts"
+  secret "BOTO_CONFIG" key : "boto"
+  secret "BOTO_CONFIG" name : "s3-config"
+}
+
 task "test": {
   inputs: ["src-git"]
+  outputs: ["artifacts"]
 
   steps: [
     {
       name: "test"
       image: "node:lts-slim"
-      command: [ "/bin/bash", "-c", "npm ci && npm run test" ] 
+      command: [ 
+        "/bin/bash", "-c", 
+        """
+        npm ci | tee /workspace/output/artifacts/npm-ci.txt
+        npm test | tee /workspace/output/artifacts/unit-tests.txt
+        """ 
+      ] 
       workingDir: "/workspace/src-git"
     }
   ]
