@@ -2,9 +2,9 @@ const assert = require("assert");
 
 describe("Index", () => {
   it("should pass", () => {
-    assert.equal(1, 1);
+    assert.equal(1, 2);
   });
   it("should be true", () => {
-    assert.equal(true, false);
+    assert.equal(true, true);
   });
 });
