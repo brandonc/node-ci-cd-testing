@@ -6,7 +6,7 @@ resource "src-git": {
   param revision: "$(context.git.commit)"
 }
 
-resource "artifacts": {
+resource "artifacts" {
   type: "storage"
   param type: "gcs"
   param location: "s3://artifacts"
