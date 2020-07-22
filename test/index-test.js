@@ -1,7 +1,7 @@
 const assert = require("assert");
 
 // This is a comment
-// and another
+// and another comment
 describe("Index", () => {
   it("should pass", () => {
     assert.equal(1, 1);
