@@ -14,7 +14,7 @@ describe("Index", () => {
     assert.equal(true, true);
   });
   it("passes after 3 minute", async () => {
-    await sleep(3 * 60 * 1000);
+    await sleep(5 * 60 * 1000);
     assert.equal(true, true);
   });
 });
