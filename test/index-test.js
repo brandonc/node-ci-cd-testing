@@ -13,8 +13,8 @@ describe("Index", () => {
   it("should be true", () => {
     assert.equal(true, true);
   });
-  it("passes after 1 minute", async () => {
-    await sleep(60000);
+  it("passes after 3 minute", async () => {
+    await sleep(3 * 60 * 1000);
     assert.equal(true, true);
   });
 });
