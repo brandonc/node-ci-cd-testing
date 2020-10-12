@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "mocha"
+    "test": "mocha --timeout 62000"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/TattdCodeMonkey/node-ci-cd-testing#readme",
   "dependencies": {
-    "mocha": "^7.1.1"
+    "mocha": "8.1.3"
   }
 }
